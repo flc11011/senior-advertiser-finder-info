@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How the personal Senior Advertiser Finder app handles its local data and optional Google Sheets connection.">
+  <title>Privacy policy · Senior Advertiser Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true">S</span><span>Senior Advertiser Finder</span></a>
+    <nav aria-label="Information pages"><a href="index.html">About</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Use information</a></nav>
+  </header>
+  <main id="main" class="document">
+    <p class="eyebrow">Data handling · November 2026</p>
+    <h1>Privacy policy</h1>
+    <p class="intro">Senior Advertiser Finder is a Windows application operated by its owner for personal research and draft review. This page describes its local storage, public-source research and optional Google connection.</p>
+    <section><h2>Data saved on the computer</h2><p>The app stores its market queue, discovered business information, public advertising evidence and source links, publication progress, duplicate records, selections, editable outreach drafts and activity messages in its own local data folder. Business information may include a published contact name, email address, telephone number, website or location. Unknown details remain blank or are labeled as unpublished.</p><p>Publication downloads and rendered pages are temporary working files. The app has no hosted lead database or analytics service.</p></section>
+    <section><h2>What Google access is used for</h2><p>Choosing Connect Google opens Google sign-in and a file picker. The app requests <code>drive.file</code> access for the configured queue spreadsheet selected by the owner. It reads and updates that Sheet’s six queue columns: Location, Senior Center, Ad Price, Target Leads, Leads Found and Status. It also saves row identifiers in the Sheet to keep queue entries aligned.</p><p>Google receives those queue inputs and progress updates as part of synchronization. The app does not upload its lead records, advertising evidence or outreach drafts to Google, and does not request Gmail, Contacts, Calendar or all-Drive access.</p></section>
+    <section><h2>Google connection credentials</h2><p>Google access and refresh tokens are encrypted before being saved locally, using Windows Data Protection API protection for the current Windows user. They are used only to maintain the selected queue connection. The app does not send these credentials to an app-operated server.</p><p>The owner can revoke the app’s access in their Google Account’s third-party connections. Removing the local saved connection while the app is stopped also removes its locally stored token. Revoking access or moving to a different Windows account may require a new sign-in.</p></section>
+    <section><h2>Public research and local AI</h2><p>Research sends the queue’s geographic search terms to public search services and requests pages or publications from public websites. Those services receive ordinary connection information, such as the requesting computer’s IP address and the requested query or URL.</p><p>OCR and vision analysis run locally with the installed OCR libraries and Ollama model. The app does not use a paid or hosted AI API. Research results can contain errors, so the owner reviews the saved evidence and drafts.</p></section>
+    <section><h2>Background operation and retention</h2><p>Closing the dashboard leaves the background app running. Pause stops new research work after any active page finishes; Google queue synchronization can continue while research is paused. Stop the background app to stop its ongoing connections.</p><p>Local records remain in the app’s data folder until the owner removes them. Google Sheet data remains in the selected Sheet until it is changed or deleted there. The app does not sell data or share local lead records with advertisers.</p></section>
+    <section><h2>Use of Google data</h2><p>Google user data is used only for the selected queue workflow described here. It is not sold, used for advertising targeting, or used to train AI models. Local vision analysis receives public publication images, not Google authorization credentials or the queue spreadsheet.</p></section>
+    <section><h2>These information pages</h2><p>These pages contain no analytics, tracking scripts, signup forms or app-set cookies. A hosting provider may process normal page-delivery logs under its own policies. This personal app has no public customer account system or public support service.</p></section>
+    <aside class="note"><strong>Outreach stays under review.</strong> Email sending, text sending and Salesforce CSV export are disabled in the current app.</aside>
+  </main>
+  <footer><p>Senior Advertiser Finder · Owner-operated personal use</p><p><a href="index.html">About the app</a><a href="terms.html">Terms / use information</a></p></footer>
+</body>
+</html>
